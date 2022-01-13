@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+         crossorigin="anonymous"
+      />
+      <link rel='icon' href='favicon.png' type='image/x-icon'/ >
+      <link
+         href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="style.css" />
+      <title>Twittuh. It's what's happening</title>
+   </head>
+   <body>
+      <!--Main page-->
+      <section class="main-page">
+         <!--left side-->
+         <div class="left">
+            <div class="left-content">
+               <div>
+                  <i class="fas fa-search"></i>
+                  <h3 class="left-content-heading">Follow your interests</h3>
+               </div>
+               <div>
+                  <i class="fas fa-user-friends"></i>
+                  <h3 class="left-content-heading">
+                     Hear what people are talking about
+                  </h3>
+               </div>
+               <div>
+                  <i class="fas fa-comment"></i>
+                  <h3 class="left-content-heading">Join the people</h3>
+               </div>
+            </div>
+         </div>
+         <!-- end of left side-->
+         <!--right side-->
+         <div class="right">
+            <form class="right-content-form">
+               <input
+                  placeholder="Phone,email or username"
+                  type="text"
+                  class="user-info"
+               />
+               <div>
+                  <input
+                     type="password"
+                     class="password"
+                     placeholder="Password"
+                  />
+                  <a href="#">Forgot Password?</a>
+               </div>
+               <button type="button" class="btn-top">Log in</button>
+            </form>
+            <div class="middle-content">
+               <i class="fab fa-twitter"></i>
+               <h1>See what's happening in the world</h1>
+               <h4>Join Twittuh today!</h4>
+               <button type="button" class="sign-up main-btn">Sign Up</button>
+               <button type="button" class="log-in main-btn">Log In</button>
+            </div>
+         </div>
+         <!--end of right side-->
+         <!--footer-->
+         <footer class="main-page-footer">
+            <ul>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Help Center</a></li>
+               <li><a href="#">Terms of Service</a></li>
+               <li><a href="#">Privacy Policy</a></li>
+               <li><a href="#">Cookie Policy</a></li>
+               <li><a href="#">Accesibility</a></li>
+               <li><a href="#">Contact</a></li>
+               <li><a href="#">Blog</a></li>
+               <li><a href="#">Careers</a></li>
+               <li><a href="#">Settings</a></li>
+               <li><a href="#">Developers</a></li>
+               <li><a href="#">&copy;2022 Twittuh,Tiyasha</a></li>
+            </ul>
+         </footer>
+         <!--end of footer-->
+      </section>
+      <!--end of main page-->
+      <!--login page-->
+      <section class="login-page">
+         <!--login page nav-->
+         <nav class="login-page-nav">
+            <ul>
+               <li>
+                  <a href="#" class="return-to-mainPage"
+                     ><i class="fab fa-twitter"></i
+                  ></a>
+               </li>
+               <li><a href="#" class="return-to-mainPage">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Language:English</a></li>
+            </ul>
+         </nav>
+         <!--end of login page nav -->
+         <!--login-->
+         <div class="login">
+            <div class="login-content">
+               <h2>Log In to Twittuh</h2>
+               <form class="login-form">
+                  <input
+                     type="text"
+                     class="login-user-info"
+                     placeholder="Phone,email or username"
+                  />
+                  <input
+                     type="password"
+                     class="login-password"
+                     placeholder="Password"
+                  />
+                  <div>
+                     <button
+                        type="button"
+                        class="login-form-btn"
+                        onclick="lsRememberMe()"
+                     >
+                        Log In
+                     </button>
+                     <input
+                        type="checkbox"
+                        value="lsRememberMe"
+                        class="login-form-checkbox"
+                        id="check"
+                     />
+                     <label for="check">Remember me</label>
+                     <a href="#">Forgot password?</a>
+                  </div>
+               </form>
+            </div>
+            <footer class="login-footer">
+               <p>New to Twittuh? <a href="#">Sign up now</a></p>
+               <p>
+                  Already using Twittuh via text message?
+                  <a href="#">Activate your account</a>
+               </p>
+            </footer>
+         </div>
+         <!--end of login-->
+         <!--login modal-->
+         <div class="login-wrapper">
+            <div class="login-modal">
+               <i class="fas fa-times"></i>
+               <p>
+                  The username or the password entered is either incorrect or is
+                  missing.Please try again.
+               </p>
+            </div>
+         </div>
+         <!--end of login modal-->
+      </section>
+      <!--end of login page-->
+      <!--feeds page-->
+      <section class="feeds-page">
+         <!--feeds nav-->
+         <nav class="feeds-nav dark-mode-1">
+            <div class="icons feeds-nav-icons">
+               <a href="#" class="active"><i class="fas fa-home"></i></a>
+               <a href="#"><i class="fas fa-hashtag"></i></a>
+               <a href="#"><i class="far fa-bell"></i></a>
+               <a href="#"><i class="far fa-envelope"></i></a>
+            </div>
+            <div class="search-bar">
+               <i class="fas fa-search"></i>
+               <input
+                  type="text"
+                  placeholder="Search Twittuh"
+                  class="search-bar-input border dark-mode-2 light-text"
+               />
+            </div>
+            <div class="user">
+               <div class="user-img-wrapper">
+                  <img src="images/user1.jpg" />
+               </div>
+               <a href="#" class="user-link light-text">Rachel Green</a>
+               <i class="fas fa-chevron-down"></i>
+            </div>
+         </nav>
+         <!--end of feeds nav-->
+         <!--feeds content-->
+         <div class="feeds-content dark-mode-2">
+            <div class="feeds-header dark-mode-1">
+               <div class="header-top border">
+                  <h4 class="light-text">Home</h4>
+                  <i class="far fa-star"></i>
+               </div>
+               <div class="header-post border dark-mode-1">
+                  <div class="header-img-wrapper">
+                     <img src="images/user1.jpg" />
+                  </div>
+                  <input
+                     type="text"
+                     placeholder="What's happening?"
+                     class="dark-mode-2 light-text border"
+                  />
+                  <i class="far fa-image"></i>
+                  <i class="fas fa-camera"></i>
+                  <i class="far fa-chart-bar"></i>
+               </div>
+            </div>
+            <div class="posts dark-mode-1">
+               <div class="post border">
+                  <div class="user-info">
+                     <img src="images/user2.jpg" />
+                  </div>
+                  <div class="post-content">
+                     <div class="post-user-info light-text">
+                        <h4>Monica Geller</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@MonicaGeller 15m</span>
+                     </div>
+                     <p class="post-text light-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Voluptates et voluptatibus vel tenetur quos, id
+                        omnis sed error fuga necessitatibus.
+                     </p>
+                     <div class="post-img">
+                        <img src="images/post-img-1.jpg" />
+                     </div>
+                     <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-share-alt"></i>
+                     </div>
+                  </div>
+               </div>
+               <div class="post border">
+                  <div class="user-info">
+                     <img src="images/user3.jpg" />
+                  </div>
+                  <div class="post-content">
+                     <div class="post-user-info light-text">
+                        <h4>Chandler Bing</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@ChandlerBing 15m</span>
+                     </div>
+                     <p class="post-text light-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Voluptates et voluptatibus vel tenetur quos, id
+                        omnis sed error fuga necessitatibus.
+                     </p>
+                     <div class="post-img">
+                        <img src="images/post-img-2.jpg" />
+                     </div>
+                     <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-share-alt"></i>
+                     </div>
+                  </div>
+               </div>
+               <div class="post border">
+                  <div class="user-info">
+                     <img src="images/user4.jpg" />
+                  </div>
+                  <div class="post-content">
+                     <div class="post-user-info light-text">
+                        <h4>Joey Tribbiani</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@JoeyTribbiani 15m</span>
+                     </div>
+                     <p class="post-text light-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Voluptates et voluptatibus vel tenetur quos, id
+                        omnis sed error fuga necessitatibus.
+                     </p>
+                     <div class="post-img">
+                        <img src="images/post-img-3.jpg" />
+                     </div>
+                     <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-share-alt"></i>
+                     </div>
+                  </div>
+               </div>
+               <div class="post border">
+                  <div class="user-info">
+                     <img src="images/user5.jpg" />
+                  </div>
+                  <div class="post-content">
+                     <div class="post-user-info light-text">
+                        <h4>Phoebe Buffay</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@PhoebeBuffay 15m</span>
+                     </div>
+                     <p class="post-text light-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Voluptates et voluptatibus vel tenetur quos, id
+                        omnis sed error fuga necessitatibus.
+                     </p>
+                     <div class="post-img">
+                        <img src="images/post-img-4.jpg" />
+                     </div>
+                     <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-share-alt"></i>
+                     </div>
+                  </div>
+               </div>
+               <div class="post border">
+                  <div class="user-info">
+                     <img src="images/user6.jpg" />
+                  </div>
+                  <div class="post-content">
+                     <div class="post-user-info light-text">
+                        <h4>Ross Geller</h4>
+                        <i class="fas fa-check-circle"></i>
+                        <span>@RossGeller 15m</span>
+                     </div>
+                     <p class="post-text light-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Voluptates et voluptatibus vel tenetur quos, id
+                        omnis sed error fuga necessitatibus.
+                     </p>
+                     <div class="post-img">
+                        <img src="images/post-img-5.jpg" />
+                     </div>
+                     <div class="post-icons">
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-retweet"></i>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-share-alt"></i>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="follow dark-mode-1">
+               <h3 class="follow-heading border light-text">Who to Follow</h3>
+               <div class="follow-user border">
+                  <div class="follow-user-img">
+                     <img src="images/user3.jpg" />
+                  </div>
+                  <div class="follow-user-info light-text">
+                     <h4>Chandler Bing</h4>
+                     <p>@ChandlerBing</p>
+                  </div>
+                  <button class="follow-btn dark-mode-2" type="button">
+                     Follow
+                  </button>
+               </div>
+               <div class="follow-user border">
+                  <div class="follow-user-img">
+                     <img src="images/user6.jpg" />
+                  </div>
+                  <div class="follow-user-info light-text">
+                     <h4>Ross Geller</h4>
+                     <p>@Ross Geller</p>
+                  </div>
+                  <button class="follow-btn dark-mode-2" type="button">
+                     Follow
+                  </button>
+               </div>
+               <div class="follow-user border">
+                  <div class="follow-user-img">
+                     <img src="images/user5.jpg" />
+                  </div>
+                  <div class="follow-user-info light-text">
+                     <h4>Phoebe Buffay</h4>
+                     <p>@PhoebeBuffay</p>
+                  </div>
+                  <button class="follow-btn dark-mode-2" type="button">
+                     Follow
+                  </button>
+               </div>
+               <div class="follow-link">
+                  <a href="#">Show more</a>
+               </div>
+               <footer class="follow-footer dark-mode-2">
+                  <ul>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Terms of Service</a></li>
+                     <li><a href="#">Privacy Policy</a></li>
+                     <li><a href="#">More</a></li>
+                     <li><a href="#">&copy;2022 Twittuh,Tiyasha</a></li>
+                  </ul>
+               </footer>
+            </div>
+         </div>
+         <button type="button" class="post-btn">
+            +<i class="fas fa-feather-alt"></i>
+         </button>
+
+         <!--end of feeds content-->
+         <!--feeds modal-->
+         <div class="modal-wrapper">
+            <div class="modal dark-mode-1">
+               <div class="modal-header border">
+                  <i class="fas fa-times"></i>
+                  <button type="button" class="">Post</button>
+               </div>
+               <div class="modal-body">
+                  <div class="modal-img">
+                     <img src="images/user1.jpg" />
+                  </div>
+                  <input
+                     type="text"
+                     placeholder="What's happening?"
+                     class="modal-input border dark-mode-2 light-text"
+                  />
+                  <i class="far fa-smile"></i>
+               </div>
+               <div class="modal-footer">
+                  <div class="modal-icons">
+                     <i class="far fa-image"></i>
+                     <i class="fas fa-camera"></i>
+                     <i class="far fa-chart-bar"></i>
+                     <span>+</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!--end of feed modal-->
+         <!--sidebar-->
+         <div class="sidebar-wrapper">
+            <div class="sidebar dark-mode-1">
+               <div class="sidebar-header border">
+                  <h2 class="light-text">Account info</h2>
+                  <i class="fas fa-times"></i>
+               </div>
+               <div class="sidebar-user">
+                  <div class="sidebar-user-img">
+                     <img src="images/user1.jpg" />
+                  </div>
+                  <span>+</span>
+               </div>
+               <div class="sidebar-user-info light-text">
+                  <h4>Rachel Green</h4>
+                  <p>@rachelgreen</p>
+               </div>
+               <div class="following light-text">
+                  <p class="following-paragraph"><span>711</span> Following</p>
+                  <p class="following-paragraph"><span>7.5K</span> Followers</p>
+               </div>
+               <div class="sidebar-list-1 border">
+                  <ul>
+                     <li>
+                        <a href="#"> <i class="fas fa-user"></i> Profile </a>
+                     </li>
+                     <li>
+                        <a href="#"> <i class="far fa-list-alt"></i> Lists </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <i class="far fa-bookmark"></i> Bookmarks
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#"> <i class="fab fa-adversal"></i> Ads </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <i class="fas fa-chart-line"></i> Analytics
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="sidebar-list-2">
+                  <ul>
+                     <li><a href="#">Settings and Privacy</a></li>
+                     <li><a href="#">Help Center</a></li>
+                     <li><a href="#" class="logout">Log Out</a></li>
+                  </ul>
+               </div>
+               <!--dark mode toggle button-->
+               <div class="dark-mode">
+                  <p>Dark Mode</p>
+                  <div class="toggle">
+                     <div class="circle"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!--end of sidebar-->
+      </section>
+      <!-- end of feeds page-->
+      <script src="script.js"></script>
+   </body>
+</html>
